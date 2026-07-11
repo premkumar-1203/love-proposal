@@ -1,0 +1,114 @@
+.proposal{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:120px 20px;
+
+}
+
+.proposal-title{
+
+    font-size:60px;
+
+    margin-bottom:60px;
+
+    font-family:"Great Vibes",cursive;
+
+}
+
+.ring-box{
+
+    width:220px;
+
+    height:170px;
+
+    margin-bottom:60px;
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+.proposal-message{
+
+    display:none;
+
+    max-width:750px;
+
+    margin:auto;
+
+    animation:fadeUp .8s;
+
+}
+
+.proposal-message h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+}
+
+.proposal-message p{
+
+    font-size:24px;
+
+    line-height:1.7;
+
+    margin-bottom:40px;
+
+}
+
+.buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:30px;
+
+    flex-wrap:wrap;
+
+}
+
+.buttons button{
+
+    min-width:220px;
+
+}
+.ring{
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%) scale(.2);
+
+    font-size:70px;
+
+    opacity:0;
+
+    transition:1s;
+
+}
+
+.ring-box.open .ring{
+
+    transform:translate(-50%,-50%) scale(1);
+
+    opacity:1;
+
+}

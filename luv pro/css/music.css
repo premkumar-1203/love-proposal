@@ -1,0 +1,65 @@
+#musicBtn{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:65px;
+
+height:65px;
+
+border:none;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(15px);
+
+color:white;
+
+font-size:28px;
+
+cursor:pointer;
+
+z-index:9999;
+
+box-shadow:0 0 25px rgba(255,255,255,.3);
+
+transition:.4s;
+
+}
+
+#musicBtn:hover{
+
+transform:scale(1.15) rotate(10deg);
+
+box-shadow:
+0 0 20px white,
+0 0 50px hotpink;
+
+}
+
+#musicBtn.playing{
+
+animation:pulseMusic 1.5s infinite;
+
+}
+
+@keyframes pulseMusic{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.12);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
