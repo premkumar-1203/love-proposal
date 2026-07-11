@@ -1,0 +1,202 @@
+.gallery{
+
+    padding:120px 40px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:40px;
+
+    max-width:1400px;
+
+    margin:auto;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:white;
+
+    transition:
+    transform .25s ease,
+    box-shadow .3s ease;
+
+    transform-style:preserve-3d;
+
+}
+
+.gallery-item:hover{
+
+    transform:translateY(-15px) rotate(-1deg);
+
+    box-shadow:
+    0 20px 50px rgba(255,255,255,.4),
+    0 25px 70px rgba(255,0,120,.35);
+
+}
+
+.gallery-item img{
+
+    width:100%;
+
+    height:350px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.6s;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.gallery-caption{
+
+    padding:20px;
+
+    text-align:center;
+
+    background:white;
+
+}
+
+.gallery-caption h3{
+
+    color:#ff2e63;
+
+    margin-bottom:10px;
+
+    font-size:24px;
+
+}
+
+.gallery-caption p{
+
+    color:#666;
+
+    line-height:1.6;
+
+}
+#lightbox{
+
+    flex-direction:column;
+
+}
+
+#lightboxCaption{
+
+    color:white;
+
+    font-size:22px;
+
+    margin-top:20px;
+
+    text-align:center;
+
+    max-width:80%;
+
+}
+.gallery-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:25px;
+
+    background:linear-gradient(
+        45deg,
+        #ff2e63,
+        #ff7eb3,
+        #ffffff,
+        #ff2e63
+    );
+
+    background-size:300% 300%;
+
+    z-index:-1;
+
+    opacity:0;
+
+    transition:.4s;
+
+    animation:borderGlow 6s linear infinite;
+
+}
+
+.gallery-item:hover::before{
+
+    opacity:1;
+
+}
+
+@keyframes borderGlow{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    50%{
+
+        background-position:100% 50%;
+
+    }
+
+    100%{
+
+        background-position:0% 50%;
+
+    }
+
+}
+.photo-heart{
+
+    position:absolute;
+
+    font-size:18px;
+
+    pointer-events:none;
+
+    animation:photoHeart 1.5s forwards;
+
+}
+
+@keyframes photoHeart{
+
+    0%{
+
+        opacity:1;
+
+        transform:translateY(0) scale(.5);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:translateY(-80px) scale(1.5);
+
+    }
+
+}
