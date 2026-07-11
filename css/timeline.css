@@ -1,0 +1,89 @@
+.timeline{
+    position:relative;
+    padding:180px 20px 120px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:48px;
+    font-family:"Great Vibes",cursive;
+    margin-bottom:80px;
+}
+
+.timeline-container{
+    position:relative;
+    max-width:1200px;
+    margin:auto;
+}
+
+.timeline-container::before{
+    content:"";
+    position:absolute;
+    width:4px;
+    background:rgba(255,255,255,.35);
+    top:0;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+
+.timeline-item{
+    position:relative;
+    width:50%;
+    padding:30px 40px;
+}
+
+.timeline-item.left{
+    left:0;
+}
+
+.timeline-item.right{
+    left:50%;
+}
+
+.content{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+    transition:.4s;
+}
+
+.content:hover{
+    transform:translateY(-8px) scale(1.02);
+}
+
+.timeline-item::after{
+    content:"❤";
+    position:absolute;
+    top:40px;
+    width:24px;
+    height:24px;
+    background:#ff4d88;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    border:3px solid white;
+}
+
+.timeline-item.left::after{
+    right:-12px;
+}
+
+.timeline-item.right::after{
+    left:-12px;
+}
+
+.date{
+    color:#ffe6ee;
+    font-size:14px;
+}
+
+.content h3{
+    margin:12px 0;
+    font-size:26px;
+}

@@ -1,0 +1,300 @@
+.hearts{
+
+position:fixed;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+overflow:hidden;
+
+}
+
+.hearts::before{
+
+content:"❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+
+position:absolute;
+
+font-size:40px;
+
+width:100%;
+
+animation:fall 15s linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-100px);
+
+}
+
+100%{
+
+transform:translateY(120vh);
+
+}
+
+}
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:
+
+all 1.2s ease;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+/* ============================= */
+/* Mouse Hearts                  */
+/* ============================= */
+
+.mouse-heart{
+
+    position:absolute;
+
+    pointer-events:none;
+
+    font-size:22px;
+
+    transform:translate(-50%,-50%);
+
+    animation:heartFloat 1s ease-out forwards;
+
+    z-index:9999;
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        opacity:1;
+
+        transform:
+        translate(-50%,-50%)
+        scale(.4);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        translate(-50%,-130px)
+        scale(1.8)
+        rotate(25deg);
+
+    }
+
+}
+/* ============================= */
+/* Sparkles                      */
+/* ============================= */
+
+.sparkle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:white;
+
+    pointer-events:none;
+
+    animation:sparkle .6s linear forwards;
+
+}
+
+@keyframes sparkle{
+
+    0%{
+
+        opacity:1;
+
+        transform:scale(.3);
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+        scale(2)
+        translateY(-25px);
+
+    }
+
+}
+/* ========================= */
+/* Floating Hearts */
+/* ========================= */
+
+.floating-heart{
+
+position:fixed;
+
+bottom:-60px;
+
+font-size:22px;
+
+animation:floatHeart linear forwards;
+
+pointer-events:none;
+
+opacity:.9;
+
+z-index:-1;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:
+translateY(0)
+scale(.6);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+rotate(360deg)
+scale(1.5);
+
+opacity:0;
+
+}
+
+}
+/* ========================= */
+/* Stars */
+/* ========================= */
+
+.star{
+
+position:fixed;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 3s infinite;
+
+pointer-events:none;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.2;
+
+transform:scale(1);
+
+}
+
+50%{
+
+opacity:1;
+
+transform:scale(2);
+
+}
+
+100%{
+
+opacity:.2;
+
+transform:scale(1);
+
+}
+
+}
+section{
+
+transition:all .8s ease;
+
+}
+.petal{
+
+position:fixed;
+
+top:-60px;
+
+font-size:22px;
+
+pointer-events:none;
+
+animation:petalFall linear forwards;
+
+z-index:-1;
+
+}
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+translateY(-50px)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+translateX(120px)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
